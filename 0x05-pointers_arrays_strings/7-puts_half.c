@@ -5,25 +5,21 @@
  * @str: input
  * Return: half of input
  */
-
 void puts_half(char *str)
 {
-	int i;
-	int length;
-	int n;
+	int a, n, longi;
 
-	while (*str != '\0')
-	{
-		length++;
-		str++;
-	}
+	longi = 0;
 
-	n = (length / 2);
-	if ((length % 2 == 1)
-		n = ((length + 1) / 2);
+	for (a = 0; str[a] != '\0'; a++)
+		longi++;
 
-	for (i = n; str[i] != '\0'; i++)
-	_putchar(str[i]);
+	n = (longi / 2);
 
+	if ((longi % 2) == 1)
+		n = ((longi + 1) / 2);
+
+	for (a = n; str[a] != '\0'; a++)
+		_putchar(str[a]);
 	_putchar('\n');
 }
