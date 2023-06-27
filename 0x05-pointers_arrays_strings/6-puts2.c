@@ -5,24 +5,25 @@
  * @str: input
  * Return: print
  */
-
 void puts2(char *str)
 {
-	int length;
-	int i;
-	char *s;
+	int longi = 0;
+	int t = 0;
+	char *y = str;
+	int o;
 
-	while (*s != '\0')
+	while (*y != '\0')
 	{
-		s++;
-		length++;
+		y++;
+		longi++;
 	}
-	for (i=0; i <length; i++)
+	t = longi - 1;
+	for (o = 0 ; o <= t ; o++)
 	{
-		if (i%2==0)
-		{
-			_putchar(str[i]);
-		}
+		if (o % 2 == 0)
+	{
+		_putchar(str[o]);
+	}
 	}
 	_putchar('\n');
 }
